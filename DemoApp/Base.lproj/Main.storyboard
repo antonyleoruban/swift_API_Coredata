@@ -344,6 +344,10 @@
                                     <outlet property="delegate" destination="GEq-cU-2dm" id="QAD-XO-RGC"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-ud-sOo">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -351,16 +355,48 @@
                             <constraint firstItem="O4a-XN-e6u" firstAttribute="bottom" secondItem="Kkq-p3-tXh" secondAttribute="bottom" id="Ic4-kh-ynM"/>
                             <constraint firstItem="O4a-XN-e6u" firstAttribute="trailing" secondItem="Kkq-p3-tXh" secondAttribute="trailing" id="Kly-gM-6b4"/>
                             <constraint firstItem="O4a-XN-e6u" firstAttribute="leading" secondItem="Kkq-p3-tXh" secondAttribute="leading" id="Pys-l5-cTY"/>
+                            <constraint firstItem="oPZ-ud-sOo" firstAttribute="centerY" secondItem="DBv-KF-BBO" secondAttribute="centerY" id="bWA-dI-Sp1"/>
+                            <constraint firstItem="oPZ-ud-sOo" firstAttribute="centerX" secondItem="DBv-KF-BBO" secondAttribute="centerX" id="rOi-Bb-iee"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kkq-p3-tXh"/>
                     </view>
                     <connections>
+                        <outlet property="animationView" destination="oPZ-ud-sOo" id="Flc-gD-TaQ"/>
                         <outlet property="tblView" destination="O4a-XN-e6u" id="YsM-cD-4ws"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gf-az-0Z8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3389.5999999999999" y="90.404797601199405"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="SeJ-1D-fGD">
+            <objects>
+                <viewController storyboardIdentifier="LocationViewController" id="ou5-Jc-zTx" customClass="LocationViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7R9-zJ-dCm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Yxe-Ge-etz">
+                                <rect key="frame" x="16" y="68" width="343" height="492"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="quJ-ca-OuU" firstAttribute="bottom" secondItem="Yxe-Ge-etz" secondAttribute="bottom" constant="107" id="Afe-wR-y17"/>
+                            <constraint firstItem="quJ-ca-OuU" firstAttribute="trailing" secondItem="Yxe-Ge-etz" secondAttribute="trailing" constant="16" id="PRL-SI-X6h"/>
+                            <constraint firstItem="Yxe-Ge-etz" firstAttribute="top" secondItem="quJ-ca-OuU" secondAttribute="top" constant="48" id="hSw-8u-tNA"/>
+                            <constraint firstItem="Yxe-Ge-etz" firstAttribute="leading" secondItem="quJ-ca-OuU" secondAttribute="leading" constant="16" id="j0r-Gh-5Wx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="quJ-ca-OuU"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="Yxe-Ge-etz" id="Xp1-ZN-JyT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRf-rj-o6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4133.6000000000004" y="89.505247376311857"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f0e-9O-UKg">

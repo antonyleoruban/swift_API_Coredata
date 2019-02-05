@@ -24,6 +24,7 @@
 		7FD231822209A652005B124F /* FeedsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD231812209A652005B124F /* FeedsCell.swift */; };
 		7FD231842209A6E2005B124F /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD231832209A6E2005B124F /* FeedsViewController.swift */; };
 		7FD231862209A7E3005B124F /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD231852209A7E3005B124F /* Feed.swift */; };
+		7FD231882209CE8C005B124F /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD231872209CE8C005B124F /* LocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7FD231812209A652005B124F /* FeedsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsCell.swift; sourceTree = "<group>"; };
 		7FD231832209A6E2005B124F /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		7FD231852209A7E3005B124F /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		7FD231872209CE8C005B124F /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				7FD2317422097FB7005B124F /* MainViewController.swift */,
 				7FD2317D2209951D005B124F /* ListViewController.swift */,
 				7FD231832209A6E2005B124F /* FeedsViewController.swift */,
+				7FD231872209CE8C005B124F /* LocationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD231882209CE8C005B124F /* LocationViewController.swift in Sources */,
 				7FD2317522097FB7005B124F /* MainViewController.swift in Sources */,
 				7FD2317C22098D15005B124F /* StudentModel.swift in Sources */,
 				7FD23171220978B8005B124F /* TbCell.swift in Sources */,

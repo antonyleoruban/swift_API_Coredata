@@ -22,15 +22,34 @@ class FeedsViewController: UIViewController,UITableViewDataSource,UITableViewDel
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedsCell", for: indexPath) as? FeedsCell else {return UITableViewCell()}
         
+        
+        let fixedWidth = tableView.frame.size.width
+       
+//        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
+//        
+//        textView.frame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+
+
+        
         let feed = feedsArr[indexPath.row]
         cell.configureCell(feed: feed)
         return cell
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let nextVc: LocationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LocationViewController") as? LocationViewController
+        {
+            self.navigationController?.pushViewController(nextVc, animated: true)
+        }
+        
+    }
+    
 
     
     var feedsArr = [Feed]()
+    @IBOutlet weak var animationView: UIActivityIndicatorView!
     
     @IBOutlet weak var tblView: UITableView!
     override func viewDidLoad() {
@@ -55,11 +74,17 @@ class FeedsViewController: UIViewController,UITableViewDataSource,UITableViewDel
                     
                     self.feedsArr = downloadJson
                     self.tblView .reloadData()
+                    self.animationView.stopAnimating()
+
                 }
             }
             catch
             {
+                DispatchQueue.main.async {
                 debugPrint(error.localizedDescription)
+                    self.animationView.stopAnimating()
+
+                }
             }
         }
         

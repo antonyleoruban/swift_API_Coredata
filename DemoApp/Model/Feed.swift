@@ -12,7 +12,7 @@ struct Feed: Codable {
     var id: Int
     var title: String
     var body : String
-    var address : Address
+   // var address : Address
 
 }
 struct Address :Codable {

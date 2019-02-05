@@ -22,7 +22,7 @@ class FeedsCell: UITableViewCell {
         
         lbl_ID.text = "\(feed.id)"
         lbl_Title.text = feed.title
-        print(feed.address)
+       // print(feed.address)
     }
     
     
